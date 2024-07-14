@@ -1,0 +1,33 @@
+Deklarasikan ALPHABET sebagai string konstan yang berisi huruf a-z
+
+Fungsi encryptData(inputStr, shiftKey)
+    Ubah inputStr menjadi huruf kecil
+    Inisialisasi encryptStr sebagai string kosong
+    Untuk setiap karakter dalam inputStr
+        Temukan posisi karakter dalam ALPHABET
+        Hitung encryptPos sebagai (shiftKey + pos) modulo 26
+        Dapatkan encryptChar dari ALPHABET pada encryptPos
+        Tambahkan encryptChar ke encryptStr
+    Kembalikan encryptStr
+
+Fungsi decryptData(inputStr, shiftKey)
+    Ubah inputStr menjadi huruf kecil
+    Inisialisasi decryptStr sebagai string kosong
+    Untuk setiap karakter dalam inputStr
+        Temukan posisi karakter dalam ALPHABET
+        Hitung decryptPos sebagai (pos - shiftKey) modulo 26
+        Jika decryptPos negatif
+            Tambahkan panjang ALPHABET ke decryptPos
+        Dapatkan decryptChar dari ALPHABET pada decryptPos
+        Tambahkan decryptChar ke decryptStr
+    Kembalikan decryptStr
+
+Prosedur utama
+    Buat instance Scanner
+    Minta pengguna memasukkan string untuk enkripsi
+    Baca inputStr dari pengguna
+    Minta pengguna memasukkan nilai shiftKey
+    Baca shiftKey dari pengguna
+    Cetak "Encrypted Data ===> " diikuti dengan hasil encryptData(inputStr, shiftKey)
+    Cetak "Decrypted Data ===> " diikuti dengan hasil decryptData pada string yang telah dienkripsi dengan shiftKey
+    Tutup Scanner
