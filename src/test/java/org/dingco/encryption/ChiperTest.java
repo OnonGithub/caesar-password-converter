@@ -6,6 +6,6 @@ import org.junit.jupiter.api.Test;
 public class ChiperTest {
     @Test
     void testingEncryption() {
-        Assertions.assertEquals("C", Chiper.decrypt("C", 2));
+        Assertions.assertEquals("A", Chiper.decrypt("C", 2));
     }
 }
